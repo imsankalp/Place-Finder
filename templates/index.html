@@ -1,0 +1,63 @@
+<!doctype html>
+<title>DOODLE THE POODLE</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .col-1 {
+    background: #D7E8D4;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    background: gray;
+    height: 20vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+  article{
+     background-image: url('static/image/image_index_1.png');
+     height: 100%;
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+</style>
+<body>
+  <nav class="col-1">  <h1>Fill<br><br> the <br><br>WANDERLUST <br><br>within<br><br> you!</h1></nav>
+  <div class="col-2">
+  	<header>
+        <h3>DOODLE THE POODLE</h3>
+        <form  action="/results" method="POST">
+            <label><p1>Search! </p1></label>
+            <input type="text" name="loc">
+            <input type="submit" value="submit">
+        </form>
+    </header>
+    <main class="content">
+    <article>
+
+    </article>
+    </main>
+      <footer><h1>Happy Travelling!</h1></footer>
+  </div>
+</body>

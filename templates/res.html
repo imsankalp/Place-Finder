@@ -1,0 +1,86 @@
+<!doctype html>
+<title>DOODLE THE POODLE</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .col-1 {
+    background: #D7E8D4;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+
+   #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+</style>
+<body>
+  <nav class="col-1"><h3>DOODLE <br>THE <br>POODLE</h3><br> <h3>Fill the wanderlust within you</nav>
+  <div class="col-2">
+  	<header>
+        <h2>DOODLE THE POODLE</h2>
+
+    </header>
+    <main class="content">
+    <article>
+        <table id="customers">
+            <tr>
+                <th>Your Search Results for {{loc}}  are: </th>
+            </tr>
+             {% for i in range(l) %}
+            <tr>
+                <td >{{li[i][s]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </article>
+    </main>
+      <footer><h1>Happy Travelling!</h1></footer>
+  </div>
+</body>
